@@ -1,58 +1,42 @@
-// Colours
-$theme-colour:  rgb(136,176,75);
-$black:         rgb(0,0,0);
-$white:         rgb(255,255,255);
-$gray:          rgb(128,128,128);
-$silver:        rgb(192,192,192);
-$transparent:   rgba(255, 255, 255, 0);
-$text-colour:   rgb(88, 87, 92);
-
-$primary-colour: $theme-colour;
-$secondary-colour: $white;
-
-// Typography
-$font-family: 'Roboto', sans-serif;
-
-$font-size-base:  1.6rem;
-
-// Add any font sizes the site used
-
-$font-size-large:  2rem;   // ~20px
-$font-size-small:  1.2rem; // ~12px
-
-$font-size-menu: $font-size-base;
-$font-size-menu-s: $font-size-base * 0.80;
-
-// Typography
-$line-height-base: 1.2em;
-
-// Layout
-$container-width: 128.0rem; // ~1280px
-$container-width-s: 600rem;
-$section-vertical-space: 4rem;
-$gutter: 2rem;
-$gutter-s: 1rem;
-$border-radious: 20px;
 
 
-$breakpoints: (
-  small: 767px,
-  medium: 992px,
-  large: 1200px,
-);
+:root {
+    --color-primary: #44318d;
+    --color-primary-light: #8265a7;
+    --color-primary-dark: #2a1b3d;
+    --color-white: #fff;
+    --color-white-tr: rgba(255, 255, 255, 0.473);
+    --color-black: black;
+    --color-secondary-light: #ffb900;
+    --color-secondary-dark: #ff7730;
 
-// Logo (desktop) sizes
-$logo-size-vertical: 30rem;
-$logo-size-horizontal: 100rem;
+    --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, .5);
+    --shadow-light: 0 2rem 6rem rgba(0, 0, 0, .3);
+
+    --line: 1px solid var(--color-grey-light-2);
+
+    --gradient-primary: linear-gradient(
+        to right bottom,
+        rgba(#000, 0.8),
+        rgba(#2a1b3d, 0.8));
+}
 
 
-// Buttons
-$btn-border-radious: $border-radious; 
-$btn-font-weight: 400;
-$btn-font-size: $font-size-base;
-$btn-width: 20rem;
-$btn-color: $white;
-// Forms
 
-// Footer
-$footer-font-colour: $silver;
+$color-primary: #3f3866;
+$color-primary-light: #7b68e6;
+$color-primary-dark: #0a0527;
+
+$color-secondary-light: #ffb900;
+$color-secondary-dark: #ff7730;
+
+$color-tertiary-light: #2998ff;
+$color-tertiary-dark: #5643fa;
+
+$color-grey-dark-1: #eee;
+$color-grey-light: #eee;
+
+$color-grey-dark: rgb(32, 32, 32);
+$color-white: #fff;
+$color-black: #000;
+

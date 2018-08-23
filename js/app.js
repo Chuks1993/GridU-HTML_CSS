@@ -1,4 +1,4 @@
-import '../styles/app.scss';
+import '../styles/main.scss';
 import 'retinajs';
 
 console.info('Hola!');

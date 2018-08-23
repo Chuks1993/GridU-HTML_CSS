@@ -1,6 +1,61 @@
-h1, .h1 { font-size: $font-size-base * 3; }
-h2, .h2 { font-size: $font-size-base * 2.6; }
-h3, .h3 { font-size: $font-size-base * 2.2; }
-h4, .h4 { font-size: $font-size-base * 1.8 ; }
-h5, .h5 { font-size: $font-size-base * 1.4; }
-h6, .h6 { font-size: $font-size-base * 1; }
+@import url('https://fonts.googleapis.com/css?family=Anton|Lato:100,300,400,700,900|Lobster');
+
+
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 200;
+    /*font-size: 16px;*/
+    line-height: 1.7;
+}
+
+.heading-primary {
+    color: var(--color-white);
+    backface-visibility: hidden;
+    margin-bottom: 5rem;
+    
+
+    &--main {
+    display: block;
+    font-size: 7rem;
+    font-weight: 400;
+    letter-spacing: 3rem;
+    font-family: 'Anton', sans-serif;
+    color: #2180d9;
+
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    }
+
+    &--sub {
+        display: block;
+        font-size: 5rem;
+        font-weight: 200;
+        letter-spacing: 1.75rem;
+        font-family: 'Lobster', cursive;
+        animation: moveInRight 1s ease-out;
+        color: #f49607;
+    }
+}
+
+.heading-secondary {
+    font-size: 5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 10rem;
+    display: inline-block;
+    background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark));
+    -webkit-background-clip: text;
+    color: transparent;
+    letter-spacing: 2rem;
+    text-shadow: var(--shadow-dark);
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+
+    &__text {
+        color: var(--color-secondary-dark);
+    }
+}
+
+

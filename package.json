@@ -1,5 +1,5 @@
 {
-  "name": "starter-html-sass-js-webpack",
+  "name": "HTML_CSS",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
@@ -8,7 +8,7 @@
     "dev": "npm run lint && webpack-dev-server --config webpack.dev.config.js --inline",
     "lint": "./node_modules/.bin/eslint js"
   },
-  "author": "Fransy",
+  "author": "Chuks",
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.26.3",
@@ -27,5 +27,6 @@
     "url-loader": "^0.5.7",
     "webpack": "^1.12.14",
     "webpack-dev-server": "^1.14.1"
-  }
+  },
+  "repository": "https://github.com/Chuks1993/GridU-HTML_CSS.git"
 }

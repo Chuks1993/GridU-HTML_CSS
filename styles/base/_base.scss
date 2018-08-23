@@ -1,59 +1,33 @@
-html {
-    box-sizing: border-box;
-    font-size: 62.5%;
-    height: 100%;
+
+
+* {
+    margin: 0;
+    padding: 0;
 }
 
 *,
-*:before,
-*:after {
+*::before,
+*::after {
     box-sizing: inherit;
 }
 
+html {
+    box-sizing: border-box;
+    font-size: 62.5% //1rem = 10px (10px <-- target / 16px <= browser default = 62.5%)
+}
+
 body {
-    font-family: $font-family;
-    color: $text-colour;
-    height: 100%;
-    width: 100%;
-    overflow-x: hidden;
-    overflow-y: visible;
-    font-size: $font-size-base;
+    box-sizing: border-box;
+    // background-image: linear-gradient(to right bottom,
+    //     var(--color-primary-light),
+    //     var(--color-primary-dark));
+    // background-size: cover;
+    // background-repeat: no-repeat;
+    padding: 2rem;
+    min-height: 100vh;
+    //../img/hqRMHITj_400x400.jpg
 }
 
-p {
-    line-height: $line-height-base;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-a {
-    color: $text-colour;
-    text-decoration: none;
-}
-
-.hr {
-    border-bottom: 1px solid $silver;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-}
-
-.social-icon {
-    font-size: 0px;
-    color: $transparent;
-}
-
-@include media("<=small") {
-    .section {
-        padding: ($gutter) 0;
-    }
-}
-
-@include media(">small") {
-    .section {
-        padding: ($gutter * 4) 0;
-    }
+.container {
+    background-color: rgba($color: #ff7730, $alpha: .3);   
 }

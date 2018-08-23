@@ -1,1 +1,53 @@
-// Page example
+
+.content {
+    position: relative;
+    text-align: center;
+    padding: 1rem;
+    margin: 8rem;
+    
+
+    &__top {
+        display: flex;
+        justify-content: space-around; 
+        height: 40rem;
+    }
+
+    &__bottom {
+        display: flex;
+        margin-top: 5rem;
+        height: 20rem;
+        justify-content: space-around;
+
+        transition: all .2s;
+
+        &:hover .bottom-feature-box:not(:hover) {
+            transform: scale(.95);
+        }
+    }
+}
+
+.sub-content {
+    height: 100vh;
+    position: relative;
+
+    background-image: linear-gradient(to right bottom,
+     rgba($color-black, 0.8),
+      rgba($color-primary-dark, 0.8)), url(../images/pstchris.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+
+    transform: skewY(-4deg);
+    box-shadow: var(--shadow-dark);
+    
+
+    & > * {
+        transform: skewY(4deg);
+    }
+}
+
+.bottom-content {
+    height: 70vh;
+}
+

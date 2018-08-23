@@ -1,0 +1,55 @@
+.btn {
+    &, //so it applies to all the buttons
+    &:link, //applies to link <a> buttons
+    &:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.5rem 4rem;
+        display: inline-block;
+        border-radius: 10rem;
+        transition: all .2s;
+        position: relative;
+        font-size: 4rem;
+
+
+        //change for the <button> element
+        border: none;
+        cursor: pointer;
+    }
+
+    &:hover {
+        transform: translateY(-.3rem);
+        box-shadow: 0 1rem 2rem rgba(black, .5);
+    }
+
+    &:active,
+    &:focus { //makes focus have the features of avtive aswell
+        outline: none; 
+        transform: translateY(-.1rem);
+        box-shadow: 0 .5rem 1rem rgba(black, .2);
+    }
+
+    &--white {
+        color: var(--color-white);
+    }
+}
+
+.btn-text {
+    &:link,
+    &:visited {
+        font-size: 4rem;
+        color: var(--color-primary);
+        display: inline-block;
+        text-decoration: none;
+        border-bottom: 1px solid var(--color-primary);
+        padding: 3px;
+        transition: all .2s;
+    }
+
+    &:hover {
+        background-color: var(--color-primary);
+        color: black;
+        box-shadow: 0 1rem 2rem rgba(black, .15);
+        transform: translate(-2px);
+    }
+}
