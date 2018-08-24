@@ -1,0 +1,19 @@
+
+
+.content {
+    flex: 1 0 auto;
+    margin: 0 5rem;
+    display: flex;
+
+    
+    @include respond-phone {
+        margin: 0 .5rem;
+    }
+
+    &__main {
+        background-color: rgba(0,0,0,0.35);
+        padding: 1rem 0;
+        flex-direction: column;
+        flex: 1;
+    }
+}

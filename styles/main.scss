@@ -8,22 +8,19 @@
 
 // ///////ABSTRACTS
 // @import "abstracts/variables";
-// @import "abstracts/mixins";
+@import "abstracts/mixins";
 
 
 
-// ////////LAYOUT
-// @import "layout/header";
+////////LAYOUT
+@import "layout/header";
+@import "layout/footer";
+@import "layout/section";
 
 
 
 // // ///////COMPONENTS
-// @import "components/button";
-// @import "components/card";
-// @import "components/feature-box";
-// @import "components/bg-video";
-// @import "components/banner";
-// @import "components/footer";
+@import "components/modal";
 
 // //PAGES
 // @import "pages/home";

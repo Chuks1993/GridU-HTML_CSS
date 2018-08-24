@@ -1,0 +1,16 @@
+
+
+.footer {
+    flex-shrink: 0;
+	height: 4.5rem;
+	border: 0 solid #979797;
+	background: linear-gradient(180deg, #449587 0%, #2A8676 100%);
+    box-shadow: 0 3px 0 0 rgba(92,186,150,0.5);
+    
+    display: flex;
+    justify-content: center;
+
+    &__text {
+        padding: 1rem;
+    }
+}
