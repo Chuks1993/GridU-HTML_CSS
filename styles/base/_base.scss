@@ -1,4 +1,5 @@
 
+@import "../abstracts/mixins";
 
 * {
     margin: 0;
@@ -14,6 +15,14 @@
 html {
     box-sizing: border-box;
     font-size: 62.5%; //1rem = 10px (10px <-- target / 16px <= browser default = 62.5%);
+
+    @include respond(phone) {
+        font-size: 50%;
+    }
+
+    @include respond(tablet) {
+        font-size: 60%;
+    }
 }
 
 body {

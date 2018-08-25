@@ -4,16 +4,20 @@
     flex: 1 0 auto;
     margin: 0 5rem;
     display: flex;
+    color: black;
 
     
-    @include respond-phone {
+    @include respond(phone) {
         margin: 0 .5rem;
     }
 
     &__main {
         background-color: rgba(0,0,0,0.35);
-        padding: 1rem 0;
+        padding: 2rem 3rem;
         flex-direction: column;
         flex: 1;
+        display: flex;
+        justify-content: space-evenly;
+        
     }
 }
