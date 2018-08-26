@@ -1,4 +1,13 @@
 import '../styles/main.scss';
 import 'retinajs';
 
-console.info('Hola!');
+const drpdwnBtn = document.getElementById("drpdwnBtn");
+
+console.log(drpdwnBtn);
+
+function drpdwnToggle() { 
+    drpdwnContent.classList.toggle('show');
+    console.log('clicked');
+ }
+
+drpdwnBtn.addEventListener("click", drpdwnToggle);

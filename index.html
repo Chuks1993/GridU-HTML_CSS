@@ -14,8 +14,15 @@
 <body class="root">
     <header class="header">
         <nav class="header__nav">
-            <div>image</div>
-            <div>text</div>
+            <svg class="cart">
+                <use xlink:href="images/sprite.svg#icon-cart"></use>
+            </svg>
+            <div class="user">
+                <span>Hello, John Doe</span>
+                <svg class="exit">
+                    <use xlink:href="images/sprite.svg#icon-exit"></use>
+                </svg>
+            </div>
         </nav>
     </header>
 
@@ -47,8 +54,61 @@
             
 
             <div class="product-filter">
-                <button class="btn btn--wide">Filter Options</button>
+                
+                <div class="dropdown">
+                    <button id="drpdwnBtn" class="btn btn--wide">Filter Options</button>
+                    <div id="drpdwnContent" class="dropdown__content">
+                        <div class="dropdown__content__box">
+                            <div class="dropdown__content__box__availability">
+                                <span>Availabilty:</span>
+                                <div>
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="switch__slider"></span>
+                                    </label>
+                                    <span>Available Only</span>   
+                                </div>
+                            </div>
+                            <div class="dropdown__content__box__gender">
+                                <span>Gender:</span>
+                                <div class="radioBtn">
+                                    <label for="" class="radioBtn__container">
+                                        Men
+                                        <input type="radio" name="radio">
+                                        <span class="radioBtn__container__checkmark"></span>
+                                    </label>
+                                    <label for="" class="radioBtn__container">
+                                        Women
+                                        <input type="radio" name="radio">
+                                        <span class="radioBtn__container__checkmark"></span>
+                                    </label>
+                                    <label for="" class="radioBtn__container">
+                                        Unisex
+                                        <input type="radio" name="radio">
+                                        <span class="radioBtn__container__checkmark"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div>Category:</div>
+                        </div>
+                        <hr class="divider u-divider-thin">
+                        <div class="dropdown__content__box">
+                            <div>Rating:</div>
+                            <div>Price:</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="box-selector">
+                    <select>
+                        <option value="">Shirt</option>
+                        <option value="">Shoes</option>
+                        <option value="">Watches</option>
+                    </select>
+                </div> -->
                 <input type="text" placeholder="Filter by text...">
+                <svg class="product-filter__search">
+                    <use xlink:href="images/sprite.svg#icon-search"></use>
+                </svg>
             </div>
             <div class="products">
                 <div class="products__items">
@@ -61,7 +121,7 @@
                     </div>
                     <div class="products__items__bottom">
                         <h2 class="heading-secondary">Title One</h2>
-                        <hr class="products__items__bottom__divider">
+                        <hr class="divider">
                         <p class="products__items__bottom__text">
                              Nullam rhoncus auctor nibh, ac finibus ex dictum eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
                             porta elementum urna, eget pharetra turpis tristique et.
@@ -94,7 +154,7 @@
                     </div>
                     <div class="products__items__bottom">
                         <h2 class="heading-secondary">Title One</h2>
-                        <hr class="products__items__bottom__divider">
+                        <hr class="divider">
                         <p class="products__items__bottom__text">
                             Nullam rhoncus auctor nibh, ac finibus ex dictum eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
                             porta elementum urna, eget pharetra turpis tristique et.
@@ -115,7 +175,7 @@
                     </div>
                     <div class="products__items__bottom">
                         <h2 class="heading-secondary">Title One</h2>
-                        <hr class="products__items__bottom__divider">
+                        <hr class="divider">
                         <p class="products__items__bottom__text">
                             Nullam rhoncus auctor nibh, ac finibus ex dictum eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
                             porta elementum urna, eget pharetra turpis tristique et.
@@ -136,7 +196,7 @@
                     </div>
                     <div class="products__items__bottom">
                         <h2 class="heading-secondary">Title One</h2>
-                        <hr class="products__items__bottom__divider">
+                        <hr class="divider">
                         <p class="products__items__bottom__text">
                              Nullam rhoncus auctor nibh, ac finibus ex dictum eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
                             porta elementum urna, eget pharetra turpis tristique et.
@@ -157,7 +217,7 @@
                     </div>
                     <div class="products__items__bottom">
                         <h2 class="heading-secondary">Title One</h2>
-                        <hr class="products__items__bottom__divider">
+                        <hr class="divider">
                         <p class="products__items__bottom__text">
                             Nullam rhoncus auctor nibh, ac finibus ex dictum eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
                             porta elementum urna, eget pharetra turpis tristique et.
@@ -178,7 +238,7 @@
                     </div>
                     <div class="products__items__bottom">
                         <h2 class="heading-secondary">Title One</h2>
-                        <hr class="products__items__bottom__divider">
+                        <hr class="divider">
                         <p class="products__items__bottom__text">
                             Nullam rhoncus auctor nibh, ac finibus ex dictum eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
                             porta elementum urna, eget pharetra turpis tristique et.
@@ -196,7 +256,8 @@
     <footer class="footer">
         <div class="footer__text">Copyright "Demo Shop", 2018</div>
     </footer>
-   
+
+<script src="dist/bundle.js"></script>
 </body>
 
 </html>

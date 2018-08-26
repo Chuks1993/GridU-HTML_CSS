@@ -1,0 +1,163 @@
+
+
+////DROPDOWN MENU
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+
+    &__content {
+        display: flex;
+        position: absolute;
+        background-color: #f1f1f1;
+        overflow: auto;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        width: 75rem;
+        height: 16rem;
+        margin-top: 2rem;
+        margin-left: -23rem;
+        border-radius: 1rem;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding: 2rem;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+
+        &__box {
+            display: flex; 
+            justify-content: space-between;
+            font-size: 1.2rem;
+
+            &__availability {
+                
+
+                & div {
+                    display: flex;
+                    align-items: center;
+                }
+            }
+
+            &__gender {
+                display: flex;
+                flex-direction: column;
+
+            }
+        }
+    }
+}
+
+.show {
+    display: flex;
+}
+
+////DIVIDER
+
+.divider {
+    width: 100%;
+    align-self: center;
+    border: .1rem solid #3FC5CB;    
+}
+
+
+///SWITCH
+
+.switch {
+    position: relative;
+    display: flex;
+    width: 5rem;
+    height: 2.4rem;
+    margin-right: .5rem;
+    margin-top: .5rem;
+
+
+    & input {
+        display: none;
+
+        &:checked + .switch__slider {
+            background-color: var(--color-primary);
+        }
+
+        &:checked + .switch__slider:before {
+            transform: translateX(2.1rem);
+        }
+    }
+
+    &__slider {
+        position: relative;
+        cursor: pointer;
+        background-color: lightgrey;
+        -webkit-transition: .4s;
+        transition: .4s;
+        height: 100%;
+        width: 90%;
+        border-radius: 3rem;
+
+        &:before {
+            position: absolute;
+            content: "";
+            height: 1.6rem;
+            width: 1.6rem;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+            border-radius: 50%;
+        }
+    }
+}
+
+
+/////RADIO BUTTON
+
+.radioBtn {
+    display: flex;
+
+    &__container {
+        display: block;
+        position: relative;
+        cursor: pointer;
+        user-select: none;
+
+        .radioBtn__container__checkmark:after {    
+            top: 3px;
+            left: 2.5px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: white;
+        }
+
+        & input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+
+            &:checked ~ .radioBtn__container__checkmark {
+                background-color: #2196F3;
+            }
+
+            &:checked ~ .radioBtn__container__checkmark:after{
+                display: block;
+            }
+        }
+
+        &__checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 25px;
+            width: 25px;
+            background-color: #eee;
+            border-radius: 50%;
+
+            &:after {
+                content: "";
+                position: absolute;
+                display: none;
+            }
+        }
+    }
+}
+

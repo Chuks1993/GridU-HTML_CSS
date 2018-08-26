@@ -10,7 +10,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 1rem 5rem;
+        padding: 1rem 15rem;
         
         @include respond(phone) {
             padding: .5rem
