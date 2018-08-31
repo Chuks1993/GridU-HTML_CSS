@@ -2,7 +2,6 @@
 .login-container {
     display: flex;
     justify-content: center;
-    margin-top: 10%;
 }
 
 .login {
@@ -52,7 +51,7 @@
             border: none;
         }
 
-        & input {
+        & > input {
             //border: solid .2rem red;
 
             &:focus {
@@ -69,6 +68,8 @@
         & button {
             align-self: flex-end;
             width: 30%;
+            height: 5rem;
+            border-radius: 1rem;
 
             
             @include respond(tablet) {

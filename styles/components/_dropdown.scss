@@ -7,7 +7,7 @@
     display: inline-block;
 
     &__content {
-        display: flex;
+        display: none;
         position: absolute;
         background-color: #f1f1f1;
         overflow: auto;
@@ -19,22 +19,49 @@
         margin-left: -23rem;
         border-radius: 1rem;
         flex-direction: column;
-        justify-content: space-evenly;
         padding: 2rem;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+        @include respond(phone) {
+            width: 44rem;
+            height: 43rem;
+            margin-left: 0;
+        }
 
 
         &__box {
             display: flex; 
             justify-content: space-between;
             font-size: 1.2rem;
+            padding-bottom: 1rem;
+            border-bottom: .1rem solid var(--color-primary-light);
+            
+
+            @include respond(phone) {
+                flex-direction: column;
+                width: 44rem;
+                border: none;
+
+                & > * {
+                    border-bottom: .2rem solid var(--color-primary-light);
+                    width: 91%;
+                }
+
+                & > *:not(:first-child) {
+                    padding-top: 1.5rem;
+                }
+            }
 
             &__availability {
-                
 
-                & div {
+                @include respond(phone) {
+                    padding-bottom: 2rem;
+                }
+                
+                &__container {
                     display: flex;
                     align-items: center;
+                    font-size: 1.4rem;
                 }
             }
 
@@ -42,6 +69,43 @@
                 display: flex;
                 flex-direction: column;
 
+                
+                @include respond(phone) {
+                    padding-bottom: 2rem;
+                }
+            }
+
+            &__category {
+                
+                @include respond(phone) {
+                    padding-bottom: 2rem;
+                }
+            }
+        }
+
+        &__box-bottom {
+            display: flex; 
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1.2rem;
+            width: 33rem;
+            padding-top: 1rem;
+
+            @include respond(phone) {
+                flex-direction: column;
+                width: 44rem;
+                align-items: flex-start;
+
+                &__rating {
+                    border-bottom: .2rem solid var(--color-primary-light);
+                    width: 91%;
+                    padding-bottom: 4rem;
+                }
+
+                &__price {
+                    padding-top: 2rem;
+                }
+                
             }
         }
     }
@@ -56,7 +120,11 @@
 .divider {
     width: 100%;
     align-self: center;
-    border: .1rem solid #3FC5CB;    
+    border: .1rem solid #3FC5CB;  
+    
+    @include respond(phone) {
+        display: none;
+    }
 }
 
 
@@ -71,7 +139,7 @@
     margin-top: .5rem;
 
 
-    & input {
+    & > input {
         display: none;
 
         &:checked + .switch__slider {
@@ -111,53 +179,146 @@
 
 /////RADIO BUTTON
 
+/* The container */
+
 .radioBtn {
     display: flex;
+    font-size: 1.4rem;
+    margin-top: 1rem;
 
     &__container {
-        display: block;
         position: relative;
-        cursor: pointer;
-        user-select: none;
+        display: flex;
+        padding-left: 3.5rem;
+        padding-right: 1rem;
 
-        .radioBtn__container__checkmark:after {    
-            top: 3px;
-            left: 2.5px;
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background: white;
+        &__input {
+            display: none;
         }
 
-        & input {
-            position: absolute;
-            opacity: 0;
+        &__label {
             cursor: pointer;
-
-            &:checked ~ .radioBtn__container__checkmark {
-                background-color: #2196F3;
-            }
-
-            &:checked ~ .radioBtn__container__checkmark:after{
-                display: block;
-            }
         }
 
         &__checkmark {
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 25px;
-            width: 25px;
-            background-color: #eee;
+            height: 2.2rem;
+            width: 2.2rem;
+            border: 1px solid var(--color-primary);
             border-radius: 50%;
+            display: inline-block;
+            position: absolute;
+            left: 0;
+            top: -.4rem;
 
-            &:after {
+            &::after {
                 content: "";
+                height: 1.8rem;
+                width: 1.8rem;
+                border-radius: 50%;
                 position: absolute;
-                display: none;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color: var(--color-primary);
+                opacity: 0;
+                transition: opacity .2s;
+
             }
         }
+
+        &__input:checked ~ &__label &__checkmark::after {
+            opacity: 1;
+        }
     }
+}
+
+///CUSTOM SELECTOR
+.box {
+    margin-top: .5rem;
+    display: flex;
+    align-items: center;
+    
+    &__selector {
+        margin-right: -2.5rem;
+
+        & > select {
+            background-color: var(--color-primary);
+            color: white;
+            padding: 1rem;
+            width: 23.5rem;
+            height: 3.5rem;
+            outline: none;
+            border-radius: .5rem;
+            box-shadow: var(--box-shadow);
+            -webkit-appearance: button;
+        }
+    }
+
+    &__icon {
+        fill: white;
+        width: var(--size-small-icon);
+        height: var(--size-small-icon);
+        margin-right: 1rem;
+        margin-left: -1rem;
+        z-index: 1;
+    }
+}
+
+
+///RANGE SLIDER
+
+input[type=range] {
+  box-sizing: border-box;
+  appearance: none;
+  width: 26.8rem;
+  overflow: hidden;
+  border: 0;
+  border-radius: 1px;
+  outline: none;
+  background: linear-gradient(var(--color-primary), var(--color-primary)) no-repeat center;
+  background-size: 100% 2px;
+  pointer-events: none;
+
+  &:active,
+  :focus {
+    outline: none;
+  }
+
+  &::-webkit-slider-thumb {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 28px;
+    background-color: var(--color-primary);
+    position: relative;
+    cursor: pointer;
+    appearance: none;
+    pointer-events: all;
+
+  }
+}
+
+.range-slider {
+  position: relative;
+
+  & > input[type=range] {
+    position: absolute;
+    margin-top: 1rem;
+  }
+
+  &--rating > input[type=range] {
+
+    @include respond(phone) {
+        margin-top: 2rem;
+        left: -3.3rem;
+    }
+  }
+
+  &--price > input[type=range] {
+    width: 41rem;
+
+    @include respond(phone) {
+        width: 40rem;
+    }
+  }
 }
 

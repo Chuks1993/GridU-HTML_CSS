@@ -2,11 +2,15 @@
 
 :root {
 
-    --color-primary: #1B745F;
+    --color-primary:#288575;
+    --color-primary-light: #2BBCC2;
     --color-primary-background: linear-gradient(180deg, #2BBCC2 0%, #1B745F 100%);
     --color-primary-boxshadow: 0 3px 0 0 rgba(92,186,150,0.5);
+    --box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 
     --size-small-icon: 2.25rem;
+
+    --size-medium-icon: 4rem;
 }
 
 

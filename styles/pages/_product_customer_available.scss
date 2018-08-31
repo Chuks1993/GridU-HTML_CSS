@@ -1,0 +1,74 @@
+.sub-nav {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-available {
+    margin-top: 2rem;
+    background-color: white;
+    width: 80%;
+    height: 70%;
+    align-self: center;
+    display: flex;
+    padding: 2rem;
+    justify-content: space-between;
+
+    @include respond(tablet) {
+        width: 100%;
+    }
+
+    @include respond(phone) {
+        flex-direction: column;
+        height: 70rem;
+        justify-content: space-evenly;
+    }
+
+    &__top {
+        background: url(../images/bag.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 49%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        @include respond(phone) {
+            width: 100%;
+            height: 60%;
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        flex-direction: column;
+        width: 49%;
+
+        @include respond(phone) {
+            width: 100%;
+        }
+
+        & h2 {
+            @include respond(phone) {
+                
+                border-bottom: .2rem solid var(--color-primary-light);
+                padding-bottom: 1rem;
+            }
+        }
+
+        & > hr {
+             margin: 1rem 0;
+        }
+
+        & > p {
+            padding-top: 1rem;
+            padding-bottom: 2rem;
+        }
+    }
+}
+
+span.quantity_left {
+    font-size: 2rem;
+    color: red;
+}

@@ -14,8 +14,15 @@
 <body class="root">
     <header class="header">
         <nav class="header__nav">
-            <div>image</div>
-            <div>text</div>
+            <svg class="cart">
+                <use xlink:href="images/sprite.svg#icon-cart"></use>
+            </svg>
+            <div class="user">
+                <span>Login</span>
+                <svg class="exit">
+                    <use xlink:href="images/sprite.svg#icon-user"></use>
+                </svg>
+            </div>
         </nav>
     </header>
 
@@ -26,10 +33,10 @@
                     <h2 class="login__header heading-secondary">Login to DemoShop</h2>
                     <form class="login__form">
                         <label for="username">Username</label>
-                        <input type="text" name="username" required>
+                        <input type="email" name="username" required>
                 
                         <label for="password">Password</label>
-                        <input type="text" name="password" required>
+                        <input type="password" name="password" required>
                 
                         <button type="submit" class="btn">Submit</button>
                     </form>

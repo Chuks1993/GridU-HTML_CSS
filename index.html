@@ -22,6 +22,9 @@
                 <svg class="exit">
                     <use xlink:href="images/sprite.svg#icon-exit"></use>
                 </svg>
+                <a href="login.html">Login </a>
+                <a href="product_customer_available.html">Product Customer</a>
+                <a href="product_admin.html">Product admin</a>
             </div>
         </nav>
     </header>
@@ -61,7 +64,7 @@
                         <div class="dropdown__content__box">
                             <div class="dropdown__content__box__availability">
                                 <span>Availabilty:</span>
-                                <div>
+                                <div class="dropdown__content__box__availability__container">
                                     <label class="switch">
                                         <input type="checkbox">
                                         <span class="switch__slider"></span>
@@ -72,39 +75,64 @@
                             <div class="dropdown__content__box__gender">
                                 <span>Gender:</span>
                                 <div class="radioBtn">
-                                    <label for="" class="radioBtn__container">
-                                        Men
-                                        <input type="radio" name="radio">
-                                        <span class="radioBtn__container__checkmark"></span>
-                                    </label>
-                                    <label for="" class="radioBtn__container">
-                                        Women
-                                        <input type="radio" name="radio">
-                                        <span class="radioBtn__container__checkmark"></span>
-                                    </label>
-                                    <label for="" class="radioBtn__container">
-                                        Unisex
-                                        <input type="radio" name="radio">
-                                        <span class="radioBtn__container__checkmark"></span>
-                                    </label>
+                                    <div class="radioBtn__container">
+                                        <input type="radio" name="radio" class="radioBtn__container__input" id="men">
+                                        <label for="men" class="radioBtn__container__label">
+                                            <span class="radioBtn__container__checkmark"></span>
+                                            Men
+                                        </label>
+                                    </div>
+                                    <div class="radioBtn__container">
+                                        <input type="radio" name="radio" class="radioBtn__container__input" id="women">
+                                        <label for="women" class="radioBtn__container__label">
+                                            <span class="radioBtn__container__checkmark"></span>
+                                            Women
+                                        </label>
+                                    </div>
+                                    <div class="radioBtn__container">
+                                        <input type="radio" name="radio" class="radioBtn__container__input" id="unisex">
+                                        <label for="unisex" class="radioBtn__container__label">
+                                            <span class="radioBtn__container__checkmark"></span>
+                                            Unisex
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
-                            <div>Category:</div>
+                            <div class="dropdown__content__box__category">
+                                <span>Category:</span>
+                                <div class="box">
+                                    <div class="box__selector">
+                                        <select>
+                                            <option value="">Shirt</option>
+                                            <option value="">Shoes</option>
+                                            <option value="">Watches</option>
+                                        </select>
+                                    </div>
+                                    <svg class="box__icon">
+                                        <use xlink:href="images/sprite.svg#icon-keyboard_arrow_down"></use>
+                                    </svg>
+                                </div>
+                            </div>
                         </div>
-                        <hr class="divider u-divider-thin">
-                        <div class="dropdown__content__box">
-                            <div>Rating:</div>
-                            <div>Price:</div>
+                        <!-- <hr class="divider u-divider-thin"> -->
+                        <div class="dropdown__content__box-bottom">
+                            <div class="dropdown__content__box-bottom__rating">
+                                <span>Rating:</span>
+                                <span class="range-slider range-slider--rating">
+                                    <input type="range" min="0" max="50" value="5" id="lower">
+                                    <input type="range" min="0" max="50" value="45" id="upper">
+                                </span>
+                            </div>
+                            <div class="dropdown__content__box-bottom__price">
+                                <span>Price:</span>
+                                <span class="range-slider range-slider--price">
+                                    <input type="range" min="0" max="50" value="5" id="lower">
+                                    <input type="range" min="0" max="50" value="45" id="upper">
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <!-- <div class="box-selector">
-                    <select>
-                        <option value="">Shirt</option>
-                        <option value="">Shoes</option>
-                        <option value="">Watches</option>
-                    </select>
-                </div> -->
                 <input type="text" placeholder="Filter by text...">
                 <svg class="product-filter__search">
                     <use xlink:href="images/sprite.svg#icon-search"></use>

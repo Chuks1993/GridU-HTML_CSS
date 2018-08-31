@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en-GB">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet" type="text/css" href="dist/style.css" />
+    <title>Customer Products</title>
+    <!-- Add icons here -->
+</head>
+
+<body class="root">
+    <header class="header">
+        <nav class="header__nav">
+            <svg class="cart">
+                <use xlink:href="images/sprite.svg#icon-cart"></use>
+            </svg>
+            <div class="user">
+                <span>Hello, John Doe</span>
+                <svg class="exit">
+                    <use xlink:href="images/sprite.svg#icon-exit"></use>
+                </svg>
+            </div>
+        </nav>
+    </header>
+
+    <section class="content">
+        <div id="modal" class="modal">
+            <div class="modal__showmore">
+                <h2 class="heading-secondary">Thank You!</h2>
+                <div class="modal__showmore__content">
+                    <span class="u-center-text">You successfully purchased this item.</span>
+                    <button class="btn modal__showmore__content__btn">Continue Shopping</button>
+                </div>
+            </div>
+        </div>
+        <div class="content__product-available">
+            <div class="sub-nav">
+                <span>Back</span>
+                <span>Category: Man / Active Wear</span>
+            </div>
+            <div class="product-available">
+                <div class="product-available__top">
+                    <div class="products__items__top__ratings">
+                        <svg class="products__items__top__ratings__stars">
+                            <use xlink:href="images/sprite.svg#icon-star-full"></use>
+                        </svg>
+                        <svg class="products__items__top__ratings__stars">
+                            <use xlink:href="images/sprite.svg#icon-star-full"></use>
+                        </svg>
+                        <svg class="products__items__top__ratings__stars">
+                            <use xlink:href="images/sprite.svg#icon-star-full"></use>
+                        </svg>
+                        <svg class="products__items__top__ratings__stars">
+                            <use xlink:href="images/sprite.svg#icon-star-full"></use>
+                        </svg>
+                        <svg class="products__items__top__ratings__stars">
+                            <use xlink:href="images/sprite.svg#icon-star-full"></use>
+                        </svg>
+                    </div>
+                </div>
+                <div class="product-available__bottom">
+                    <h2 class="heading-secondary">Title One</h2>
+                    <hr class="divider">
+                    <p class="products__items__bottom__text">
+                        Nullam rhoncus auctor nibh, ac finibus ex dictum eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+                        porta elementum urna, eget pharetra turpis tristique et.
+                    </p>
+                    <p>You can <a href="#">add 5 more</a>. You can also <a href="#">edit</a> details or <a href="#">delete</a>
+                        them.</p>
+                    <div class="products__items__bottom__purchase">
+                        <p class="products__items__bottom__purchase__price"><span>$</span>49.99</p>
+                        <button class="btn btn--short">Show More</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer__text">Copyright "Demo Shop", 2018</div>
+    </footer>
+
+</body>
+
+</html>

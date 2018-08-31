@@ -4,7 +4,7 @@
 	height: 4.5rem;
 	border: 0 solid #979797;
 	background: var(--color-primary-background);
-    box-shadow: var(--color-primary-boxshadow);;
+    box-shadow: var(--color-primary-boxshadow);
 
     &__nav {
         display: flex;
@@ -13,7 +13,7 @@
         padding: 1rem 15rem;
         
         @include respond(phone) {
-            padding: .5rem
+            padding: .5rem;
         }
     }
 }
